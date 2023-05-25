@@ -16,6 +16,7 @@ st.title("My To-Do app")
 st.subheader("This is my to-do app")
 st.write("This app is to <b>increase your productivity</b>",
          unsafe_allow_html=True)
+
 st.text_input(label="", placeholder="Add a new todo... ",
               on_change=add_todo, key="new_todo")
 
@@ -26,6 +27,8 @@ for index, todo in enumerate(todos):
         functions.write_todos(todos)
         del st.session_state[todo]
         st.experimental_rerun()
+
+
 
 
 
